@@ -11,7 +11,7 @@ function App() {
     { name: "Bowser", job: "Antagonist" },
     { name: "Louie", job: "CEO", employed: true },
     { name: "Ging", job: "CRM", employed: true },
-    { name: "Tisoy", job: "Ano yun???" },
+    { name: "Tisoy", job: "Work? Ano yun?" },
     {}
   ];
 
