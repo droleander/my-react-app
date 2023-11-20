@@ -9,6 +9,8 @@ function App() {
     { name: "Luigi", job: "Plumber", employed: true, pic: "https://via.placeholder.com/150" },
     { name: "Peach", job: "Princess" },
     { name: "Bowser", job: "Antagonist" },
+    { name: "Louie", job: "CEO"},
+    { name: "Ging", Job: "CRM" },
     {},
     {}
   ];
