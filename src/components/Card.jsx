@@ -4,7 +4,6 @@ function Card(props) {
   
   const name = props.nameProp;
   const job = props.jobProp;
-  const employed = props.employedProp;
   const pic = props.picProp;
   
   return (
@@ -13,7 +12,6 @@ function Card(props) {
       <div className="card-body">
         <h2 className="card-title">{name}</h2>
         <p className="card-text">{job}</p>
-        <p className="card-text">Employed: {employed ? "Yes" : "No"}</p>
       </div>
     </div>
   )
@@ -22,14 +20,12 @@ function Card(props) {
 Card.propTypes = {
   nameProp: PropTypes.string,
   jobProp: PropTypes.string,
-  employedProp: PropTypes.bool,
   picProp: PropTypes.string
 }
 
 Card.defaultProps = {
   nameProp: "Name",
-  jobProp: "Job Position",
-  employedProp: false,
+  jobProp: "Position",
   picProp: "https://via.placeholder.com/150"
 }
 
