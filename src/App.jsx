@@ -6,7 +6,7 @@ function App() {
   const persons = [
     { name: "Louie", job: "Chief Executive Officer", employed: true, pic: "https://via.placeholder.com/150" },
     { name: "Ging", job: "Client Relationship Manager", employed: true },
-    { name: "Tisoy", job: "Work? Ano yun?" },
+    { name: "Tisoy", job: "Work? Ano yun?", pic: "https://www.dropbox.com/s/kv4tacxc5u92b9n/SNS_Picture.jpg?dl=0" },
     { name: "Eddy", job: "Software Tester", employed: true },
     { name: "Ray", job: "IT Support - Lead", employed: true },
     { name: "Rence", job: "Software Designer - Lead", employed: true },
