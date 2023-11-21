@@ -10,7 +10,8 @@ function App() {
     { name: "Eddy", job: "Software Tester", employed: true, pic: "https://www.dropbox.com/scl/fi/ggomoa2xrbcn7d8mx0uet/SNS_Eddy.jpg?rlkey=4h1ftt7nfdsa7v4913swjg4qb&dl=1" },
     { name: "Ray", job: "IT Support - Lead", employed: true, pic: "https://www.dropbox.com/scl/fi/b7r6tyi5z16ug976lqdk3/SNS_Ray.jpg?rlkey=mzcng55w9cz4ipzlfrccy8pkn&dl=1" },
     { name: "Rence", job: "Software Designer - Lead", employed: true, pic: "https://www.dropbox.com/scl/fi/bmzgxaza72zk062xclbk5/SNS_Rence.jpg?rlkey=9a8c18s8aff2m0wwrdcl39q0x&dl=1" },
-    {},
+    { name: "Joyce", job: "Assistant Manager", employed: true, pic: "https://www.dropbox.com/scl/fi/5fq61ek6lzysv8nabvgxu/SNS_Joyce.jpg?rlkey=ene8c7qcluz4terp1l62fp9s0&dl=1" },
+    {}
   ];
 
   return (
