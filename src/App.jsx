@@ -12,7 +12,10 @@ function App() {
     { name: "Louie", job: "Chief Executive Officer", employed: true },
     { name: "Ging", job: "Client Relationship Manager", employed: true },
     { name: "Tisoy", job: "Work? Ano yun?" },
-    {}
+    { name: "Eddy", job: "Software Tester", employed: true },
+    { name: "Ray", job: "IT Support - Lead", employed: true },
+    { name: "Rence", job: "Software Designer - Lead", employed: true },
+    {},
   ];
 
   return (
