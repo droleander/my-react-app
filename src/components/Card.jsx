@@ -7,7 +7,7 @@ function Card(props) {
   const pic = props.picProp;
   
   return (
-    <div className="card text-center">
+    <div className="card text-center text-light bg-primary">
       <img className="card-img-top" src={pic} alt="Profile Picture" />
       <div className="card-body">
         <h2 className="card-title">{name}</h2>

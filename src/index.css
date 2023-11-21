@@ -9,11 +9,9 @@ body {
     padding: 20px;
     margin: 10px;
     width: 240px;
-    /* height: 100%; */
 }
 
 .card img {
-    border: 3px solid hsl(60, 100%, 50%);
     border-radius: 50%;
     margin: auto;
     width: 150px;
