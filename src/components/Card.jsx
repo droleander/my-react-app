@@ -1,33 +1,23 @@
-import PropTypes from 'prop-types';
-
-function Card(props) {
-  
-  const name = props.nameProp;
-  const job = props.jobProp;
-  const pic = props.picProp;
+/* eslint-disable react/prop-types */
+function Card({persons, heading, handleDelete}) {
   
   return (
-    <div className="card text-center text-light bg-primary">
-      <img className="card-img-top" src={pic} alt="Profile Picture" />
-      <div className="card-body">
-        <h2 className="card-title">{name}</h2>
-        <p className="card-text">{job}</p>
+    <main>
+      <h2 className="text-center">{heading}</h2>
+      <div className="container d-flex flex-wrap justify-content-center">
+        {persons.map(person => (
+          <div className="card text-center text-light bg-primary" key={person.idx}>
+            <img className="card-img-top" src={person.pic || "https://via.placeholder.com/150"} alt={`${person.name} - Photo`} />
+            <div className="card-body">
+              <h2 className="card-title">{person.name || "Name"}</h2>
+              <p className="card-text">{person.job || "Position"}</p>
+            </div>
+            <button className="btn btn-light" onClick={() => handleDelete(person.idx)}>REMOVE</button>
+          </div>
+        ))}
       </div>
-      <button className="btn btn-light">Remove</button>
-    </div>
+    </main>
   )
-}
-
-Card.propTypes = {
-  nameProp: PropTypes.string,
-  jobProp: PropTypes.string,
-  picProp: PropTypes.string,
-}
-
-Card.defaultProps = {
-  nameProp: "Name",
-  jobProp: "Position",
-  picProp: "https://via.placeholder.com/150",
 }
 
 export default Card
