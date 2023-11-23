@@ -13,6 +13,7 @@ function Card(props) {
         <h2 className="card-title">{name}</h2>
         <p className="card-text">{job}</p>
       </div>
+      <button className="btn btn-light">Remove</button>
     </div>
   )
 }
@@ -20,13 +21,13 @@ function Card(props) {
 Card.propTypes = {
   nameProp: PropTypes.string,
   jobProp: PropTypes.string,
-  picProp: PropTypes.string
+  picProp: PropTypes.string,
 }
 
 Card.defaultProps = {
   nameProp: "Name",
   jobProp: "Position",
-  picProp: "https://via.placeholder.com/150"
+  picProp: "https://via.placeholder.com/150",
 }
 
 export default Card
