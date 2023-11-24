@@ -4,7 +4,7 @@ import Footer from "./components/Footer"
 import Header from "./components/Header"
 
 function App() {
-  const [persons, setPersons] = useState([
+  const people = [
     { idx: crypto.randomUUID(), name: "Maureen", job: "CEO", pic: "https://www.dropbox.com/scl/fi/70x9rlpgi98z3n5790y8r/SNS_Louie.jpg?rlkey=3bxfp0s554afdv40sqqep5tqn&dl=1" },
     { idx: crypto.randomUUID(), name: "Cess", job: "Client Relationship Manager", pic: "https://www.dropbox.com/scl/fi/g1vxx0isfwueq6u08xz46/SNS_Ging.jpg?rlkey=siswahrmxh69u3t6keofpwxot&dl=1" },
     { idx: crypto.randomUUID(), name: "Tisoy", job: "IT Network Operations - Analyst", pic: "https://www.dropbox.com/s/kv4tacxc5u92b9n/SNS_Picture.jpg?dl=1" },
@@ -18,18 +18,19 @@ function App() {
     { idx: crypto.randomUUID(), name: "Rence", job: "Software Designer - Lead", pic: "https://www.dropbox.com/scl/fi/bmzgxaza72zk062xclbk5/SNS_Rence.jpg?rlkey=9a8c18s8aff2m0wwrdcl39q0x&dl=1" },
     { idx: crypto.randomUUID(), name: "Long", job: "IT Network Operations - Lead", pic: "" },
     { idx: crypto.randomUUID(), name: "Grace", job: "Asset Management - Lead", pic: "" },
-    {}
-  ]);
+  ];
+  
+  const [employees, setEmployees] = useState(people);
   
   const handleDelete = (idx) => {
-    const filtered = persons.filter(person => person.idx !== idx);
-    setPersons(filtered);
+    const filtered = employees.filter(employee => employee.idx !== idx);
+    setEmployees(filtered);
   }
   
   return (
     <>
       <Header />
-      <Card persons={persons} handleDelete={handleDelete} heading="Current Employees"/>
+      <Card employees={employees} handleDelete={handleDelete} heading="Current Employees"/>
       <Footer />
     </>
   )

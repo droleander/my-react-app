@@ -1,18 +1,21 @@
 /* eslint-disable react/prop-types */
-function Card({persons, heading, handleDelete}) {
+function Card({employees, heading, handleDelete}) {
   
   return (
     <main className="py-3">
       <h2 className="text-center">{heading}</h2>
       <div className="container d-flex flex-wrap justify-content-center">
-        {persons.map(person => (
-          <div className="card border-primary bg-light" key={person.idx} title="Eh di ikaw na!">
-            <img className="card-img-top" src={person.pic || "https://via.placeholder.com/150"} alt={`Photo - ${person.name}`} />
+        {employees.map(employee => (
+          <div className="card border-primary bg-light" key={employee.idx} title={`Eh di siya na ang ${employee.job}!`}>
+            <img className="card-img-top" src={employee.pic || "https://via.placeholder.com/150"} alt={`Photo - ${employee.name}`} />
             <div className="card-body text-center">
-              <h2 className="card-title">{person.name || "Name"}</h2>
-              <h3 className="card-subtitle text-muted h6">{person.job || "Position"}</h3>
+              <h2 className="card-title">{employee.name || "Name"}</h2>
+              <h3 className="card-subtitle text-muted h6">{employee.job || "Position"}</h3>
             </div>
-            <button className="btn btn-primary" onClick={() => handleDelete(person.idx)}>REMOVE EMPLOYEE</button>
+            <button className="btn btn-primary" onClick={() => {
+              alert(`${employee.name}... byeeee!`)
+              handleDelete(employee.idx)
+            }}>REMOVE EMPLOYEE</button>
           </div>
         ))}
       </div>
