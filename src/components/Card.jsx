@@ -6,7 +6,7 @@ function Card({employees, heading, handleDelete}) {
       <h2 className="text-center">{heading}</h2>
       <div className="container d-flex flex-wrap justify-content-center">
         {employees.map(employee => (
-          <div className="card border-5 border-primary" key={employee.idx} title={`Eh di siya na ang ${employee.job}!`}>
+          <div className="card border-3 border-light" key={employee.idx} title={`Eh di siya na ang ${employee.job}!`}>
             <img className="card-img-top" src={employee.pic || "https://via.placeholder.com/150"} alt={`Photo - ${employee.name}`} />
             <div className="card-body text-center">
               <h2 className="card-title">{employee.name || "Name"}</h2>
