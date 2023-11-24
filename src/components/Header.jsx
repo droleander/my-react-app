@@ -1,7 +1,7 @@
 function Header() {
   return (
     <header className="container">
-      <div className="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <div className="d-flex flex-wrap justify-content-center py-3 border-bottom">
         <h1 className="mb-3 mb-md-0 me-lg-auto">React.js + Vite + Bootstrap</h1>
         <ul className="nav nav-pills">
           <li className="nav-item"><a href="#" className="nav-link active" aria-current="page">Home</a></li>
