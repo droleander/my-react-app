@@ -17,7 +17,6 @@ function App() {
     { idx: crypto.randomUUID(), name: "Ray", job: "IT Support - Lead", pic: "https://www.dropbox.com/scl/fi/b7r6tyi5z16ug976lqdk3/SNS_Ray.jpg?rlkey=mzcng55w9cz4ipzlfrccy8pkn&dl=1" },
     { idx: crypto.randomUUID(), name: "Rence", job: "Software Designer - Lead", pic: "https://www.dropbox.com/scl/fi/bmzgxaza72zk062xclbk5/SNS_Rence.jpg?rlkey=9a8c18s8aff2m0wwrdcl39q0x&dl=1" },
     { idx: crypto.randomUUID(), name: "Long", job: "IT Network Operations - Lead", pic: "" },
-    { idx: crypto.randomUUID() }
   ];
   
   const [employees, setEmployees] = useState(people);
