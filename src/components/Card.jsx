@@ -12,7 +12,7 @@ function Card({employees, heading, handleDelete}) {
               <h2 className="card-title">{employee.name || "Name"}</h2>
               <h3 className="card-subtitle h6">{employee.job || "Position"}</h3>
             </div>
-            <button className="btn btn-warning py-2 mt-3" onClick={() => handleDelete(employee.idx)}>REMOVE EMPLOYEE</button>
+            <button className="btn btn-warning py-2 mt-3" onClick={() => handleDelete(employee.idx)}>REMOVE</button>
           </div>
         ))}
       </div>
