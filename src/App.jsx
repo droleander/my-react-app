@@ -14,7 +14,7 @@ function App() {
     { idx: crypto.randomUUID(), name: "Karen", job: "COO", pic: "https://www.dropbox.com/scl/fi/eze5zp5t6kfgnuet4q7w2/SNS_Karen.jpg?rlkey=a2dn3jxaedlyi6dn4dr88hho1&dl=1" },
     { idx: crypto.randomUUID(), name: "Veronica", job: "Customer Support Lead", pic: "https://www.dropbox.com/scl/fi/7a4s7vom6xiwicvoijtfc/SNS_Veronica.jpg?rlkey=is3qkv4obomqzbodv24bluasu&dl=1" },
     { idx: crypto.randomUUID(), name: "Glen", job: "IT Engineering Lead", pic: "https://www.dropbox.com/scl/fi/e9akceyatokw5v5bfoae7/SNS_Glen.jpg?rlkey=4hgyxcxovgkr7nzv9e7e522rt&dl=1" },
-    { idx: crypto.randomUUID(), name: "Eddy", job: "Software Tester Lead", pic: "https://www.dropbox.com/scl/fi/ggomoa2xrbcn7d8mx0uet/SNS_Eddy.jpg?rlkey=4h1ftt7nfdsa7v4913swjg4qb&dl=1" },
+    { idx: crypto.randomUUID(), name: "Eddy", job: "Software Test Lead", pic: "https://www.dropbox.com/scl/fi/ggomoa2xrbcn7d8mx0uet/SNS_Eddy.jpg?rlkey=4h1ftt7nfdsa7v4913swjg4qb&dl=1" },
     { idx: crypto.randomUUID(), name: "Ray", job: "IT Support Lead", pic: "https://www.dropbox.com/scl/fi/b7r6tyi5z16ug976lqdk3/SNS_Ray.jpg?rlkey=mzcng55w9cz4ipzlfrccy8pkn&dl=1" },
     { idx: crypto.randomUUID(), name: "Rence", job: "Software Design Lead", pic: "https://www.dropbox.com/scl/fi/bmzgxaza72zk062xclbk5/SNS_Rence.jpg?rlkey=9a8c18s8aff2m0wwrdcl39q0x&dl=1" },
     { idx: crypto.randomUUID(), name: "Long", job: "IT Network Operations Lead", pic: "https://www.dropbox.com/scl/fi/uxxraly5k8su5kp9d5hpl/SNS_Long.jpg?rlkey=upnkzvjswdem0xv2qgnd0gdt2&dl=1" },
