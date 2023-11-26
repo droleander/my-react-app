@@ -12,7 +12,18 @@ function Card({employees, heading, handleDelete}) {
               <h2 className="card-title border-bottom text-uppercase h3">{employee.name}</h2>
               <p className="card-text lh-1">{employee.job}</p>
             </div>
-            <button className="btn btn-warning border-0 rounded-pill mb-2" onClick={() => handleDelete(employee.idx)}>REMOVE</button>
+            <div className="d-flex justify-content-center align-items-center mb-2">
+              <button className="btn btn-warning border-0 rounded-pill mx-auto"
+                onClick={() => {
+                  const details =
+                    "Employee Name: " + employee.name +
+                    "\nPosition: " + employee.job +
+                    "\nEmployee ID: " + employee.idx.slice(0, 8) +
+                    "\nHobbies: " + employee.hobbies
+                  alert(details)
+                }}>Details</button>
+              <button className="btn btn-warning border-0 rounded-pill mx-auto" onClick={() => handleDelete(employee.idx)}>Remove</button>
+            </div>
           </div>
         ))}
       </div>
