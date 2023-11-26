@@ -12,7 +12,7 @@ function Card({employees, heading, handleDelete}) {
               <h2 className="card-title border-bottom text-uppercase h3">{employee.name}</h2>
               <p className="card-text lh-1">{employee.job}</p>
             </div>
-            <button className="btn btn-warning border-0 rounded-pill" onClick={() => handleDelete(employee.idx)}>REMOVE</button>
+            <button className="btn btn-warning border-0 rounded-pill m-3" onClick={() => handleDelete(employee.idx)}>REMOVE</button>
           </div>
         ))}
       </div>
