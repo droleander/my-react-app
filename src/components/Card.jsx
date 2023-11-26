@@ -22,7 +22,11 @@ function Card({employees, heading, handleDelete}) {
                     "\nHobbies: " + employee.hobbies
                   alert(details)
                 }}>Details</button>
-              <button className="btn btn-warning border-0 rounded-pill mx-auto" onClick={() => handleDelete(employee.idx)}>Remove</button>
+              <button className="btn btn-warning border-0 rounded-pill mx-auto"
+                onClick={() => {
+                  alert(`${employee.name}... so long, farewell, auf Wiedersehen, byeee!`)
+                  handleDelete(employee.idx)
+                }}>Remove</button>
             </div>
           </div>
         ))}
