@@ -34,19 +34,19 @@ function Card({employees, heading, handleDelete}) {
               <div className="modal fade" id={"detailsModal" + employee.idx} tabIndex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered">
                   <div className="modal-content bg-light bg-opacity-75 rounded-4 text-dark pb-2">
-                    <div className="modal-header border-2 border-primary border-opacity-50">
+                    <div className="modal-header border-2 border-primary border-opacity-25">
                       <h1 className="modal-title h5" id="detailsModalLabel">Employee Details</h1>
                       <button type="button" className="btn-close fs-3" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div className="modal-body">
+                    <div className="modal-body py-4">
                       <b>Name:</b> {employee.name} <br />
                       <b>Job:</b> {employee.job} <br />
                       <b>ID:</b> {employee.idx.slice(0, 8)} <br />
                       <b>Hobbies:</b> {employee.hobbies} <br />
                     </div>
-                    {/* <div className="modal-footer">
-                      <button type="button" className="btn btn-warning border-0 rounded-pill mx-auto" data-bs-dismiss="modal">Close</button>
-                    </div> */}
+                    <div className="modal-footer border-2 border-primary border-opacity-25">
+                      <p className="m-auto">&copy; {new Date().getFullYear()}</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -67,16 +67,16 @@ function Card({employees, heading, handleDelete}) {
               <div className="modal fade" id={"removeModal" + employee.idx} tabIndex="-1" aria-labelledby="removeModalLabel" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered">
                   <div className="modal-content bg-light bg-opacity-75 rounded-4 text-dark pb-2">
-                    <div className="modal-header border-2 border-primary border-opacity-50">
+                    <div className="modal-header border-2 border-primary border-opacity-25">
                       <h1 className="modal-title h5" id="removeModalLabel">Employee Removed</h1>
                       <button type="button" className="btn-close fs-3" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div className="modal-body">
+                    <div className="modal-body py-4">
                       {employee.name}... so long, farewell, auf Wiedersehen, byeee!
                     </div>
-                    {/* <div className="modal-footer">
-                      <button type="button" className="btn btn-warning border-0 rounded-pill" data-bs-dismiss="modal">Close</button>
-                    </div> */}
+                    <div className="modal-footer border-2 border-primary border-opacity-25">
+                      <p className="m-auto">&copy; {new Date().getFullYear()}</p>
+                    </div>
                   </div>
                 </div>
               </div>
