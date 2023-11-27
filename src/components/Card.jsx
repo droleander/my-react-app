@@ -33,7 +33,7 @@ function Card({employees, heading, handleDelete}) {
               {/* <!-- Modal --> */}
               <div className="modal fade" id={"detailsModal" + employee.idx} tabIndex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
                 <div className="modal-dialog">
-                  <div className="modal-content text-dark">
+                  <div className="modal-content rounded-5 bg-primary text-light">
                     <div className="modal-header">
                       <h1 className="modal-title h5" id="detailsModalLabel">Employee Details</h1>
                       <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -66,7 +66,7 @@ function Card({employees, heading, handleDelete}) {
               {/* <!-- Modal --> */}
               <div className="modal fade" id={"removeModal" + employee.idx} tabIndex="-1" aria-labelledby="removeModalLabel" aria-hidden="true">
                 <div className="modal-dialog">
-                  <div className="modal-content text-dark">
+                  <div className="modal-content rounded-5 bg-primary text-light">
                     <div className="modal-header">
                       <h1 className="modal-title h5" id="removeModalLabel">Employee Removed</h1>
                       <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
