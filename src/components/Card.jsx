@@ -13,7 +13,8 @@ function Card({employees, heading, handleDelete}) {
               <p className="card-text lh-1">{employee.job}</p>
             </div>
             <div className="d-flex justify-content-center align-items-center mb-2">
-              <button className="btn btn-warning border-0 rounded-pill mx-auto"
+              
+              {/* <button className="btn btn-warning border-0 rounded-pill mx-auto"
                 onClick={() => {
                   const details =
                     "Employee Name: " + employee.name +
@@ -21,12 +22,65 @@ function Card({employees, heading, handleDelete}) {
                     "\nEmployee ID: " + employee.idx.slice(0, 8) +
                     "\nHobbies: " + employee.hobbies
                   alert(details)
-                }}>Details</button>
-              <button className="btn btn-warning border-0 rounded-pill mx-auto"
+                }}>Details
+              </button> */}
+              
+              {/* <button className="btn btn-warning border-0 rounded-pill mx-auto"
                 onClick={() => {
                   alert(`${employee.name}... so long, farewell, auf Wiedersehen, byeee!`)
                   handleDelete(employee.idx)
-                }}>Remove</button>
+                }}>Remove</button> */}
+              
+              {/* <!-- Button trigger detailsModal --> */}
+              <button type="button" className="btn btn-warning border-0 rounded-pill mx-auto" data-bs-toggle="modal" data-bs-target="#detailsModal">
+                Details
+              </button>
+
+              {/* <!-- Modal --> */}
+              <div className="modal fade" id="detailsModal" tabIndex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
+                <div className="modal-dialog">
+                  <div className="modal-content">
+                    <div className="modal-header">
+                      <h1 className="modal-title text-primary h5" id="detailsModalLabel">Employee Details</h1>
+                      <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div className="modal-body text-dark">
+                      Employee Name: {employee.name} <br />
+                      Position: {employee.job} <br />
+                      Employee ID: {employee.idx.slice(0, 8)} <br />
+                      Hobbies: {employee.hobbies}
+                    </div>
+                    <div className="modal-footer">
+                      <button type="button" className="btn btn-warning border-0 rounded-pill" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* <!-- Button trigger deleteModal --> */}
+              <button type="button" className="btn btn-warning border-0 rounded-pill mx-auto" data-bs-toggle="modal" data-bs-target="#deleteModal" onClick={() => handleDelete(employee.idx)}>
+                Remove
+              </button>
+
+              {/* <!-- Modal --> */}
+              <div className="modal fade" id="deleteModal" tabIndex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                <div className="modal-dialog">
+                  <div className="modal-content">
+                    <div className="modal-header">
+                      <h1 className="modal-title text-primary h5" id="deleteModalLabel">Remove Employee</h1>
+                      <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div className="modal-body text-dark">
+                      {employee.name}... so long, farewell, auf Wiedersehen, byeee!
+                    </div>
+                    <div className="modal-footer">
+                      <button type="button" className="btn btn-warning border-0 rounded-pill" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              
             </div>
           </div>
         ))}
