@@ -39,10 +39,10 @@ function Card({employees, heading, handleDelete}) {
                       <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div className="modal-body">
-                      <p>Employee Name: {employee.name}</p>
-                      <p>Position: {employee.job}</p>
-                      <p>Employee ID: {employee.idx.slice(0, 8)}</p>
-                      <p>Hobbies: {employee.hobbies}</p>
+                      Employee Name: {employee.name}<br />
+                      Position: {employee.job}<br />
+                      Employee ID: {employee.idx.slice(0, 8)}<br />
+                      Hobbies: {employee.hobbies}
                     </div>
                     <div className="modal-footer">
                       <button type="button" className="btn btn-warning border-0 rounded-pill mx-auto" data-bs-dismiss="modal">Close</button>
@@ -72,7 +72,7 @@ function Card({employees, heading, handleDelete}) {
                       <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div className="modal-body">
-                      <p>{employee.name}... so long, farewell, auf Wiedersehen, byeee!</p>
+                      {employee.name}... so long, farewell, auf Wiedersehen, byeee!
                     </div>
                     <div className="modal-footer">
                       <button type="button" className="btn btn-warning border-0 rounded-pill" data-bs-dismiss="modal">Close</button>
