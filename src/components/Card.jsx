@@ -30,7 +30,6 @@ function Card({employees, heading, handleDelete}) {
               <button type="button" className="btn btn-warning border-0 rounded-pill mx-auto" data-bs-toggle="modal" data-bs-target={"#detailsModal" + employee.idx}>
                 Details
               </button>
-
               {/* <!-- Modal --> */}
               <div className="modal fade" id={"detailsModal" + employee.idx} tabIndex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
                 <div className="modal-dialog">
@@ -61,14 +60,12 @@ function Card({employees, heading, handleDelete}) {
                 }}>
                 Remove
               </button> */}
-              
-              
-              {/* <!-- Button trigger deleteModal --> */}
+
+              {/* <!-- Button trigger removeModal --> */}
               <button type="button" className="btn btn-warning border-0 rounded-pill mx-auto" data-bs-toggle="modal" data-bs-target={"#removeModal" + employee.idx}
                 onClick={() => handleDelete(employee.idx)}>
                 Remove
               </button>
-
               {/* <!-- Modal --> */}
               <div className="modal fade" id={"removeModal" + employee.idx} tabIndex="-1" aria-labelledby="removeModalLabel" aria-hidden="true">
                 <div className="modal-dialog">
@@ -86,7 +83,6 @@ function Card({employees, heading, handleDelete}) {
                   </div>
                 </div>
               </div>
-              
               
             </div>
           </div>
