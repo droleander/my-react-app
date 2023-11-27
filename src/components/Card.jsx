@@ -38,7 +38,7 @@ function Card({employees, heading, handleDelete}) {
                       <h1 className="modal-title fs-5" id="detailsModalLabel">Employee Details</h1>
                       <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div className="modal-body">
+                    <div className="modal-body fs-6">
                       <p>Employee Name: {employee.name}</p>
                       <p>Position: {employee.job}</p>
                       <p>Employee ID: {employee.idx.slice(0, 8)}</p>
