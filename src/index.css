@@ -36,5 +36,5 @@ body {
 }
 
 div.modal-body {
-    font-size: 1.125rem;
+    font-size: 1.125rem !important;
 }
