@@ -35,17 +35,17 @@ function Card({employees, heading, handleDelete}) {
                 <div className="modal-dialog">
                   <div className="modal-content text-dark">
                     <div className="modal-header">
-                      <h1 className="modal-title fs-5" id="detailsModalLabel">Employee Details</h1>
+                      <h1 className="modal-title h5" id="detailsModalLabel">Employee Details</h1>
                       <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div className="modal-body fs-6">
+                    <div className="modal-body">
                       <p>Employee Name: {employee.name}</p>
                       <p>Position: {employee.job}</p>
                       <p>Employee ID: {employee.idx.slice(0, 8)}</p>
                       <p>Hobbies: {employee.hobbies}</p>
                     </div>
                     <div className="modal-footer">
-                      <button type="button" className="btn btn-warning border-0 rounded-pill" data-bs-dismiss="modal">Close</button>
+                      <button type="button" className="btn btn-warning border-0 rounded-pill mx-auto" data-bs-dismiss="modal">Close</button>
                     </div>
                   </div>
                 </div>
@@ -68,7 +68,7 @@ function Card({employees, heading, handleDelete}) {
                 <div className="modal-dialog">
                   <div className="modal-content text-dark">
                     <div className="modal-header">
-                      <h1 className="modal-title fs-5" id="removeModalLabel">Employee Removed</h1>
+                      <h1 className="modal-title h5" id="removeModalLabel">Employee Removed</h1>
                       <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div className="modal-body">
