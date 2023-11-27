@@ -37,6 +37,6 @@ body {
         inset 10px 10px 10px rgba(255, 255, 255, 0.4);
 }
 
-.modal-body {
-    font-size: 1rem !important;
+div.modal-body {
+    font-size: 1.125em !important;
 }
