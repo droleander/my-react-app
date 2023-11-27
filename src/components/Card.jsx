@@ -39,10 +39,10 @@ function Card({employees, heading, handleDelete}) {
                       <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div className="modal-body">
-                      Employee Name: {employee.name}<br />
-                      Position: {employee.job}<br />
-                      Employee ID: {employee.idx.slice(0, 8)}<br />
-                      Hobbies: {employee.hobbies}
+                      <b>Name:</b> {employee.name}<br />
+                      <b>Job:</b> {employee.job}<br />
+                      <b>ID:</b> {employee.idx.slice(0, 8)}<br />
+                      <b>Hobbies:</b> {employee.hobbies}
                     </div>
                     <div className="modal-footer">
                       <button type="button" className="btn btn-warning border-0 rounded-pill mx-auto" data-bs-dismiss="modal">Close</button>
