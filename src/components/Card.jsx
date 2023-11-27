@@ -33,8 +33,8 @@ function Card({employees, heading, handleDelete}) {
               {/* <!-- Modal --> */}
               <div className="modal fade" id={"detailsModal" + employee.idx} tabIndex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered">
-                  <div className="modal-content bg-light bg-opacity-75 rounded-4 text-dark">
-                    <div className="modal-header">
+                  <div className="modal-content bg-light bg-opacity-75 rounded-4 text-dark pb-2">
+                    <div className="modal-header border-2 border-primary">
                       <h1 className="modal-title h5" id="detailsModalLabel">Employee Details</h1>
                       <button type="button" className="btn-close fs-3" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
@@ -66,8 +66,8 @@ function Card({employees, heading, handleDelete}) {
               {/* <!-- Modal --> */}
               <div className="modal fade" id={"removeModal" + employee.idx} tabIndex="-1" aria-labelledby="removeModalLabel" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered">
-                  <div className="modal-content bg-light bg-opacity-75 rounded-4 text-dark">
-                    <div className="modal-header">
+                  <div className="modal-content bg-light bg-opacity-75 rounded-4 text-dark pb-2">
+                    <div className="modal-header border-2 border-primary">
                       <h1 className="modal-title h5" id="removeModalLabel">Employee Removed</h1>
                       <button type="button" className="btn-close fs-3" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
