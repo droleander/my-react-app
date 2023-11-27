@@ -43,7 +43,7 @@ function Card({employees, heading, handleDelete}) {
               </div>
 
               {/* <!-- Button trigger deleteModal --> */}
-              <button type="button" className="btn btn-warning border-0 rounded-pill mx-auto" data-bs-toggle="modal" data-bs-target="#deleteModal" onClick={() => handleDelete(employee.idx)}>
+              <button type="button" className="btn btn-warning border-0 rounded-pill mx-auto" data-bs-toggle="modal" data-bs-target="#deleteModal" onClick={() => handleDelete(employee.idx)} >
                 Remove
               </button>
 
@@ -56,7 +56,7 @@ function Card({employees, heading, handleDelete}) {
                       <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div className="modal-body text-dark">
-                      <p className="m-0 p-0">{employee.name}... so long, farewell, auf Wiedersehen, byeee!</p>
+                      <p className="m-0 p-0">So long, farewell, auf Wiedersehen, byeee!</p>
                     </div>
                     <div className="modal-footer">
                       <button type="button" className="btn btn-warning border-0 rounded-pill" data-bs-dismiss="modal">Close</button>
