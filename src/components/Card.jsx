@@ -38,11 +38,13 @@ function Card({employees, heading, handleDelete}) {
                       <h1 className="modal-title h5" id="detailsModalLabel">Employee Details</h1>
                       <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div className="modal-body">
-                      <b>Name:</b> {employee.name}<br />
-                      <b>Job:</b> {employee.job}<br />
-                      <b>ID:</b> {employee.idx.slice(0, 8)}<br />
-                      <b>Hobbies:</b> {employee.hobbies}
+                    <div className="modal-body display-7">
+                      <section>
+                        <b>Name:</b> {employee.name} <br />
+                        <b>Job:</b> {employee.job} <br />
+                        <b>ID:</b> {employee.idx.slice(0, 8)} <br />
+                        <b>Hobbies:</b> {employee.hobbies} <br />
+                      </section>
                     </div>
                     <div className="modal-footer">
                       <button type="button" className="btn btn-warning border-0 rounded-pill mx-auto" data-bs-dismiss="modal">Close</button>
