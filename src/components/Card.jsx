@@ -14,23 +14,6 @@ function Card({employees, heading, handleDelete}) {
             </div>
             <div className="d-flex justify-content-center align-items-center mb-2">
               
-              {/* <button className="btn btn-warning border-0 rounded-pill mx-auto"
-                onClick={() => {
-                  const details =
-                    "Employee Name: " + employee.name +
-                    "\nPosition: " + employee.job +
-                    "\nEmployee ID: " + employee.idx.slice(0, 8) +
-                    "\nHobbies: " + employee.hobbies
-                  alert(details)
-                }}>Details
-              </button> */}
-              
-              {/* <button className="btn btn-warning border-0 rounded-pill mx-auto"
-                onClick={() => {
-                  alert(`${employee.name}... so long, farewell, auf Wiedersehen, byeee!`)
-                  handleDelete(employee.idx)
-                }}>Remove</button> */}
-              
               {/* <!-- Button trigger detailsModal --> */}
               <button type="button" className="btn btn-warning border-0 rounded-pill mx-auto" data-bs-toggle="modal" data-bs-target="#detailsModal">
                 Details
@@ -45,10 +28,12 @@ function Card({employees, heading, handleDelete}) {
                       <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div className="modal-body text-dark">
-                      Employee Name: {employee.name} <br />
-                      Position: {employee.job} <br />
-                      Employee ID: {employee.idx.slice(0, 8)} <br />
-                      Hobbies: {employee.hobbies}
+                      <p className="m-0 p-0">
+                        Employee Name: {employee.name} <br />
+                        Position: {employee.job} <br />
+                        Employee ID: {employee.idx.slice(0, 8)} <br />
+                        Hobbies: {employee.hobbies}
+                      </p>
                     </div>
                     <div className="modal-footer">
                       <button type="button" className="btn btn-warning border-0 rounded-pill" data-bs-dismiss="modal">Close</button>
@@ -71,7 +56,7 @@ function Card({employees, heading, handleDelete}) {
                       <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div className="modal-body text-dark">
-                      {employee.name}... so long, farewell, auf Wiedersehen, byeee!
+                      <p className="m-0 p-0">{employee.name}... so long, farewell, auf Wiedersehen, byeee!</p>
                     </div>
                     <div className="modal-footer">
                       <button type="button" className="btn btn-warning border-0 rounded-pill" data-bs-dismiss="modal">Close</button>
