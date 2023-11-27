@@ -32,11 +32,11 @@ function Card({employees, heading, handleDelete}) {
               </button>
               {/* <!-- Modal --> */}
               <div className="modal fade" id={"detailsModal" + employee.idx} tabIndex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
-                <div className="modal-dialog">
-                  <div className="modal-content rounded-5 bg-primary text-light">
+                <div className="modal-dialog modal-dialog-centered">
+                  <div className="modal-content bg-light bg-opacity-75 rounded-4 text-dark">
                     <div className="modal-header">
                       <h1 className="modal-title h5" id="detailsModalLabel">Employee Details</h1>
-                      <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      <button type="button" className="btn-close fs-3" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div className="modal-body">
                       <b>Name:</b> {employee.name} <br />
@@ -65,11 +65,11 @@ function Card({employees, heading, handleDelete}) {
               </button>
               {/* <!-- Modal --> */}
               <div className="modal fade" id={"removeModal" + employee.idx} tabIndex="-1" aria-labelledby="removeModalLabel" aria-hidden="true">
-                <div className="modal-dialog">
-                  <div className="modal-content rounded-5 bg-primary text-light">
+                <div className="modal-dialog modal-dialog-centered">
+                  <div className="modal-content bg-light bg-opacity-75 rounded-4 text-dark">
                     <div className="modal-header">
                       <h1 className="modal-title h5" id="removeModalLabel">Employee Removed</h1>
-                      <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      <button type="button" className="btn-close fs-3" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div className="modal-body">
                       {employee.name}... so long, farewell, auf Wiedersehen, byeee!
