@@ -7,10 +7,10 @@ function Card({employees, heading, handleDelete}) {
       <div className="container d-flex flex-wrap justify-content-center">
         {employees.map(employee => (
           <div className="card border-0 bg-primary rounded-5 text-white m-2 p-3" key={employee.idx}>
-            <img className="card-img-top d-flex justify-content-center align-items-center border border-3 border-warning rounded-circle m-auto" src={employee.pic} alt={`Photo - ${typeof employee.name !== "undefined" ? employee.name : "N.A."}`}/>
+            <img className="card-img-top d-flex justify-content-center align-items-center border border-3 border-warning rounded-circle m-auto" src={employee.pic} alt={`Photo - ${employee.name !== "" ? employee.name : "N.A."}`}/>
             <div className="card-body text-center">
-              <h2 className="card-title border-bottom text-uppercase h3">{employee.name}</h2>
-              <p className="card-text lh-1">{employee.job}</p>
+              <h2 className="card-title border-bottom text-uppercase h3">{employee.name || "NAME"}</h2>
+              <p className="card-text lh-1">{employee.job || "POSITION"}</p>
             </div>
             <div className="d-flex justify-content-center align-items-center mb-2">
               
@@ -39,10 +39,10 @@ function Card({employees, heading, handleDelete}) {
                       <button type="button" className="btn-close fs-3" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div className="modal-body py-4">
-                      <b>Name:</b> {employee.name} <br />
-                      <b>Job:</b> {employee.job} <br />
-                      <b>ID:</b> {employee.idx.slice(0, 8)} <br />
-                      <b>Hobbies:</b> {employee.hobbies} <br />
+                      <b>Name:</b> {employee.name || "NAME"} <br />
+                      <b>Job:</b> {employee.job ||"POSITION"} <br />
+                      <b>ID:</b> {employee.idx.slice(0, 8) || "XXXXXXXX"} <br />
+                      <b>Hobbies:</b> {employee.hobbies || "HOBBIES"} <br />
                     </div>
                     <div className="modal-footer border-2 border-primary border-opacity-25">
                       <p className="m-auto">&copy; {new Date().getFullYear()}</p>
@@ -72,7 +72,7 @@ function Card({employees, heading, handleDelete}) {
                       <button type="button" className="btn-close fs-3" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div className="modal-body py-4">
-                      {employee.name}... so long, farewell, auf Wiedersehen, byeee!
+                      {employee.name || "NAME"}... so long, farewell, auf Wiedersehen, byeee!
                     </div>
                     <div className="modal-footer border-2 border-primary border-opacity-25">
                       <p className="m-auto">&copy; {new Date().getFullYear()}</p>

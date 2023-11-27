@@ -18,7 +18,8 @@ function App() {
     { idx: crypto.randomUUID(), name: "Ray", job: "IT Support Lead", pic: "https://www.dropbox.com/scl/fi/b7r6tyi5z16ug976lqdk3/SNS_Ray.jpg?rlkey=mzcng55w9cz4ipzlfrccy8pkn&dl=1", hobbies: "Biking, hiking, etc." },
     { idx: crypto.randomUUID(), name: "Rence", job: "Software Design Lead", pic: "https://www.dropbox.com/scl/fi/bmzgxaza72zk062xclbk5/SNS_Rence.jpg?rlkey=9a8c18s8aff2m0wwrdcl39q0x&dl=1", hobbies: "Playing video games, etc." },
     { idx: crypto.randomUUID(), name: "Long", job: "IT Network Operations Lead", pic: "https://www.dropbox.com/scl/fi/uxxraly5k8su5kp9d5hpl/SNS_Long.jpg?rlkey=upnkzvjswdem0xv2qgnd0gdt2&dl=1", hobbies: "Kumain sa Aysee. LOL!" },
-    { idx: crypto.randomUUID(), name: "Aqui", job: "Asset Management Lead", pic: "https://www.dropbox.com/scl/fi/s7awq0du3wx4yr98wgqn1/SNS_Aqui.jpg?rlkey=m5agi094v54bdqbt8ic6nuxfa&dl=1", hobbies: "Biking, mamasyal kung saan-saan, etc." }
+    { idx: crypto.randomUUID(), name: "Aqui", job: "Asset Management Lead", pic: "https://www.dropbox.com/scl/fi/s7awq0du3wx4yr98wgqn1/SNS_Aqui.jpg?rlkey=m5agi094v54bdqbt8ic6nuxfa&dl=1", hobbies: "Biking, mamasyal kung saan-saan, etc." },
+    { idx: crypto.randomUUID(), name: "", job: "", pic: "", hobbies: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, iure." }
   ];
   
   const [employees, setEmployees] = useState(people);
