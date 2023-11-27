@@ -14,58 +14,17 @@ function Card({employees, heading, handleDelete}) {
             </div>
             <div className="d-flex justify-content-center align-items-center mb-2">
               
-              {/* <!-- Button trigger detailsModal --> */}
-              <button type="button" className="btn btn-warning border-0 rounded-pill mx-auto" data-bs-toggle="modal" data-bs-target="#detailsModal">
-                Details
-              </button>
+              <button className="btn btn-warning border-0 rounded-pill mx-auto"
+                onClick={() => {
+                  const details =
+                    "Employee Name: " + employee.name +
+                    "\nPosition: " + employee.job +
+                    "\nEmployee ID: " + employee.idx.slice(0, 8) +
+                    "\nHobbies: " + employee.hobbies
+                  alert(details)
+              }}>Details</button>
 
-              {/* <!-- Modal --> */}
-              <div className="modal fade" id="detailsModal" tabIndex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
-                <div className="modal-dialog">
-                  <div className="modal-content">
-                    <div className="modal-header">
-                      <h1 className="modal-title text-primary h5" id="detailsModalLabel">Employee Details</h1>
-                      <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div className="modal-body text-dark">
-                      <p className="m-0 p-0">
-                        Employee Name: {employee.name} <br />
-                        Position: {employee.job} <br />
-                        Employee ID: {employee.idx.slice(0, 8)} <br />
-                        Hobbies: {employee.hobbies}
-                      </p>
-                    </div>
-                    <div className="modal-footer">
-                      <button type="button" className="btn btn-warning border-0 rounded-pill" data-bs-dismiss="modal">Close</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* <!-- Button trigger deleteModal --> */}
-              <button type="button" className="btn btn-warning border-0 rounded-pill mx-auto" data-bs-toggle="modal" data-bs-target="#deleteModal" onClick={() => handleDelete(employee.idx)} >
-                Remove
-              </button>
-
-              {/* <!-- Modal --> */}
-              <div className="modal fade" id="deleteModal" tabIndex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-                <div className="modal-dialog">
-                  <div className="modal-content">
-                    <div className="modal-header">
-                      <h1 className="modal-title text-primary h5" id="deleteModalLabel">Remove Employee</h1>
-                      <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div className="modal-body text-dark">
-                      <p className="m-0 p-0">So long, farewell, auf Wiedersehen, byeee!</p>
-                    </div>
-                    <div className="modal-footer">
-                      <button type="button" className="btn btn-warning border-0 rounded-pill" data-bs-dismiss="modal">Close</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              
+              <button className="btn btn-warning border-0 rounded-pill mx-auto" onClick={() => handleDelete(employee.idx)}>Remove</button>
             </div>
           </div>
         ))}
