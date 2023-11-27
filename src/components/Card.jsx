@@ -14,7 +14,7 @@ function Card({employees, heading, handleDelete}) {
             </div>
             <div className="d-flex justify-content-center align-items-center mb-2">
               
-              <button className="btn btn-warning border-0 rounded-pill mx-auto"
+              {/* <button className="btn btn-warning border-0 rounded-pill mx-auto"
                 onClick={() => {
                   const details =
                     "Employee Name: " + employee.name +
@@ -24,15 +24,69 @@ function Card({employees, heading, handleDelete}) {
                   alert(details)
                 }}>
                 Details
+              </button> */}
+              
+              {/* <!-- Button trigger detailsModal --> */}
+              <button type="button" className="btn btn-warning border-0 rounded-pill mx-auto" data-bs-toggle="modal" data-bs-target={"#detailsModal" + employee.idx}>
+                Details
               </button>
 
-              <button className="btn btn-warning border-0 rounded-pill mx-auto"
+              {/* <!-- Modal --> */}
+              <div className="modal fade" id={"detailsModal" + employee.idx} tabIndex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
+                <div className="modal-dialog">
+                  <div className="modal-content text-dark">
+                    <div className="modal-header">
+                      <h1 className="modal-title fs-5" id="detailsModalLabel">Employee Details</h1>
+                      <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div className="modal-body">
+                      <p>
+                        Employee Name: {employee.name} <br />
+                        Position: {employee.job} <br />
+                        Employee ID: {employee.idx.slice(0, 8)} <br />
+                        Hobbies: {employee.hobbies}
+                      </p>
+                    </div>
+                    <div className="modal-footer">
+                      <button type="button" className="btn btn-warning border-0 rounded-pill" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* <button className="btn btn-warning border-0 rounded-pill mx-auto"
                 onClick={() => {
                   alert(`${employee.name}... so long, farewell, auf Wiedersehen, byeee!`)
                   handleDelete(employee.idx)
                 }}>
                 Remove
+              </button> */}
+              
+              
+              {/* <!-- Button trigger deleteModal --> */}
+              <button type="button" className="btn btn-warning border-0 rounded-pill mx-auto" data-bs-toggle="modal" data-bs-target={"#removeModal" + employee.idx}
+                onClick={() => handleDelete(employee.idx)}>
+                Remove
               </button>
+
+              {/* <!-- Modal --> */}
+              <div className="modal fade" id={"removeModal" + employee.idx} tabIndex="-1" aria-labelledby="removeModalLabel" aria-hidden="true">
+                <div className="modal-dialog">
+                  <div className="modal-content text-dark">
+                    <div className="modal-header">
+                      <h1 className="modal-title fs-5" id="removeModalLabel">Employee Removed</h1>
+                      <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div className="modal-body">
+                      <p>{employee.name}... so long, farewell, auf Wiedersehen, byeee!</p>
+                    </div>
+                    <div className="modal-footer">
+                      <button type="button" className="btn btn-warning border-0 rounded-pill" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
               
             </div>
           </div>
