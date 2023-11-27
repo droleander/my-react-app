@@ -27,7 +27,7 @@ function Card({employees, heading, handleDelete}) {
               </button> */}
               
               {/* <!-- Button trigger detailsModal --> */}
-              <button type="button" className="btn btn-warning border-0 rounded-pill mx-auto" data-bs-toggle="modal" data-bs-target={"#detailsModal" + employee.idx}>
+              <button type="button" className="btn btn-warning border-0 rounded-pill text-uppercase mx-auto" data-bs-toggle="modal" data-bs-target={"#detailsModal" + employee.idx}>
                 Details
               </button>
               {/* <!-- Modal --> */}
@@ -38,17 +38,15 @@ function Card({employees, heading, handleDelete}) {
                       <h1 className="modal-title h5" id="detailsModalLabel">Employee Details</h1>
                       <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div className="modal-body display-7">
-                      <section>
-                        <b>Name:</b> {employee.name} <br />
-                        <b>Job:</b> {employee.job} <br />
-                        <b>ID:</b> {employee.idx.slice(0, 8)} <br />
-                        <b>Hobbies:</b> {employee.hobbies} <br />
-                      </section>
+                    <div className="modal-body">
+                      <b>Name:</b> {employee.name} <br />
+                      <b>Job:</b> {employee.job} <br />
+                      <b>ID:</b> {employee.idx.slice(0, 8)} <br />
+                      <b>Hobbies:</b> {employee.hobbies} <br />
                     </div>
-                    <div className="modal-footer">
+                    {/* <div className="modal-footer">
                       <button type="button" className="btn btn-warning border-0 rounded-pill mx-auto" data-bs-dismiss="modal">Close</button>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -62,7 +60,7 @@ function Card({employees, heading, handleDelete}) {
               </button> */}
 
               {/* <!-- Button trigger removeModal --> */}
-              <button type="button" className="btn btn-warning border-0 rounded-pill mx-auto" data-bs-toggle="modal" data-bs-target={"#removeModal" + employee.idx} onClick={() => handleDelete(employee.idx)}>
+              <button type="button" className="btn btn-warning border-0 rounded-pill text-uppercase mx-auto" data-bs-toggle="modal" data-bs-target={"#removeModal" + employee.idx} onClick={() => handleDelete(employee.idx)}>
                 Remove
               </button>
               {/* <!-- Modal --> */}
@@ -76,9 +74,9 @@ function Card({employees, heading, handleDelete}) {
                     <div className="modal-body">
                       {employee.name}... so long, farewell, auf Wiedersehen, byeee!
                     </div>
-                    <div className="modal-footer">
+                    {/* <div className="modal-footer">
                       <button type="button" className="btn btn-warning border-0 rounded-pill" data-bs-dismiss="modal">Close</button>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
