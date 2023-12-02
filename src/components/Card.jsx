@@ -1,5 +1,8 @@
 /* eslint-disable react/prop-types */
-function Card({employees, heading, handleDelete}) {
+
+import Modal from "./Modal"
+
+function Card({ employees, heading, handleDelete }) {
   
   return (
     <main className="flex-grow-1 flex-shrink-0 py-3">
@@ -13,74 +16,7 @@ function Card({employees, heading, handleDelete}) {
               <p className="card-text lh-1">{employee.job || "POSITION"}</p>
             </div>
             <div className="d-flex justify-content-center align-items-center mb-2">
-              
-              {/* <button className="btn btn-warning border-0 rounded-pill mx-auto"
-                onClick={() => {
-                  const details =
-                    "Employee Name: " + employee.name +
-                    "\nPosition: " + employee.job +
-                    "\nEmployee ID: " + employee.idx.slice(0, 8) +
-                    "\nHobbies: " + employee.hobbies
-                  alert(details)
-                }}>
-                Details
-              </button> */}
-              
-              {/* <!-- Button trigger detailsModal --> */}
-              <button type="button" className="btn btn-warning border-0 rounded-pill text-uppercase mx-auto" data-bs-toggle="modal" data-bs-target={"#detailsModal" + employee.idx}>
-                Details
-              </button>
-              {/* <!-- Modal --> */}
-              <div className="modal fade" id={"detailsModal" + employee.idx} tabIndex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
-                <div className="modal-dialog modal-dialog-centered">
-                  <div className="modal-content bg-light bg-opacity-75 rounded-4 text-dark pb-2">
-                    <div className="modal-header border-2 border-primary border-opacity-25">
-                      <h1 className="modal-title h5" id="detailsModalLabel">Employee Details</h1>
-                      <button type="button" className="btn-close fs-3" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div className="modal-body py-4">
-                      <b>Name:</b> {employee.name || "NAME"} <br />
-                      <b>Job:</b> {employee.job ||"POSITION"} <br />
-                      <b>ID:</b> {employee.idx.slice(0, 8) || "XXXXXXXX"} <br />
-                      <b>Hobbies:</b> {employee.hobbies || "HOBBIES"} <br />
-                    </div>
-                    <div className="modal-footer border-2 border-primary border-opacity-25">
-                      <p className="m-auto">&copy; {new Date().getFullYear()}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* <button className="btn btn-warning border-0 rounded-pill mx-auto"
-                onClick={() => {
-                  alert(`${employee.name}... so long, farewell, auf Wiedersehen, byeee!`)
-                  handleDelete(employee.idx)
-                }}>
-                Remove
-              </button> */}
-
-              {/* <!-- Button trigger removeModal --> */}
-              <button type="button" className="btn btn-warning border-0 rounded-pill text-uppercase mx-auto" data-bs-toggle="modal" data-bs-target={"#removeModal" + employee.idx} onClick={() => handleDelete(employee.idx)}>
-                Remove
-              </button>
-              {/* <!-- Modal --> */}
-              <div className="modal fade" id={"removeModal" + employee.idx} tabIndex="-1" aria-labelledby="removeModalLabel" aria-hidden="true">
-                <div className="modal-dialog modal-dialog-centered">
-                  <div className="modal-content bg-light bg-opacity-75 rounded-4 text-dark pb-2">
-                    <div className="modal-header border-2 border-primary border-opacity-25">
-                      <h1 className="modal-title h5" id="removeModalLabel">Employee Removed</h1>
-                      <button type="button" className="btn-close fs-3" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div className="modal-body py-4">
-                      {employee.name || "NAME"}... so long, farewell, auf Wiedersehen, byeee!
-                    </div>
-                    <div className="modal-footer border-2 border-primary border-opacity-25">
-                      <p className="m-auto">&copy; {new Date().getFullYear()}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
+              <Modal handleDelete={handleDelete} employee={employee} />
             </div>
           </div>
         ))}

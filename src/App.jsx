@@ -24,7 +24,7 @@ function App() {
   
   const [employees, setEmployees] = useState(people);
   
-  const handleDelete = ((idx) => {
+  const handleDelete = (idx => {
     const filtered = employees.filter(employee => employee.idx !== idx);
     setEmployees(filtered);
   })
