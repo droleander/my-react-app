@@ -38,12 +38,16 @@ function Modal({ employee, handleDelete }) {
   return (
     <>
       {/* <!-- "DETAILS" button that will trigger modal --> */}
-      <button className="btn btn-warning border-0 rounded-pill text-uppercase mx-auto" onClick={() => handleButtonClick(detailsTitle, detailsContent, "DETAILS")}>
+      <button
+        className="btn btn-warning border-0 rounded-pill text-uppercase mx-auto"
+        onClick={() => handleButtonClick(detailsTitle, detailsContent, "DETAILS")}>
         Details
       </button>
       
       {/* <!-- "REMOVE" button that will trigger modal --> */}
-      <button className="btn btn-warning border-0 rounded-pill text-uppercase mx-auto" onClick={() => handleButtonClick(removeTitle, removeContent, "REMOVE")}>
+      <button
+        className="btn btn-warning border-0 rounded-pill text-uppercase mx-auto"
+        onClick={() => handleButtonClick(removeTitle, removeContent, "REMOVE")}>
         Remove
       </button>
 
@@ -54,7 +58,13 @@ function Modal({ employee, handleDelete }) {
             <div className="modal-content bg-light rounded-4 text-dark pb-2">
               <div className="modal-header border-2 border-primary border-opacity-25">
                 <h1 className="modal-title h4">{modalTitle}</h1>
-                <button type="button" className="btn-close fs-3" data-bs-dismiss="modal" aria-label="Close" onClick={() => handleClose()}></button>
+                <button
+                  type="button"
+                  className="btn-close fs-3"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                  onClick={() => handleClose()}>
+                </button>
               </div>
               <div className="modal-body">{modalContent}</div>
               <div className="modal-footer border-2 border-primary border-opacity-25">
