@@ -11,9 +11,7 @@ function Modal({ employee, handleDelete }) {
   const handleShow = () => setShow(true);
   const handleClose = () => {
     setShow(false);
-    if (btnClicked === "REMOVE") {
-      handleDelete(employee.idx);
-    }
+    btnClicked === "REMOVE" && handleDelete(employee.idx);
   };
   
   const handleButtonClick = (title, content, button) => {
@@ -39,13 +37,15 @@ function Modal({ employee, handleDelete }) {
   return (
     <>
       {/* <!-- "DETAILS" button that will trigger modal --> */}
-      <button className="btn btn-warning border-0 rounded-pill text-uppercase mx-auto"
+      <button
+        className="btn btn-warning border-0 rounded-pill text-uppercase mx-auto"
         onClick={() => handleButtonClick(detailsTitle, detailsContent, "DETAILS")}>
         Details
       </button>
       
       {/* <!-- "REMOVE" button that will trigger modal --> */}
-      <button className="btn btn-warning border-0 rounded-pill text-uppercase mx-auto"
+      <button
+        className="btn btn-warning border-0 rounded-pill text-uppercase mx-auto"
         onClick={() => handleButtonClick(removeTitle, removeContent, "REMOVE")}>
         Remove
       </button>
