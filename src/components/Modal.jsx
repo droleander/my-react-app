@@ -32,19 +32,18 @@ function Modal({ employee, handleDelete }) {
       <b>Hobbies: </b> {employee.hobbies || "HOBBIES"} <br />
     </div>;
   const removeTitle = <div>Removed Employee</div>;
-  const removeContent = <div>{employee.name || "NAME"}... so long, farewell, auf Wiedersehen, byeee!</div>;
+  const removeContent =
+    <div>{employee.name || "NAME"}... so long, farewell, auf Wiedersehen, byeee!</div>;
   
   return (
     <>
       {/* <!-- "DETAILS" button that will trigger modal --> */}
-      <button className = "btn btn-warning border-0 rounded-pill text-uppercase mx-auto"
-              onClick   = {() => handleButtonClick(detailsTitle, detailsContent, "DETAILS")}>
+      <button className="btn btn-warning border-0 rounded-pill text-uppercase mx-auto" onClick={() => handleButtonClick(detailsTitle, detailsContent, "DETAILS")}>
         Details
       </button>
       
       {/* <!-- "REMOVE" button that will trigger modal --> */}
-      <button className = "btn btn-warning border-0 rounded-pill text-uppercase mx-auto"
-              onClick   = {() => handleButtonClick(removeTitle, removeContent, "REMOVE")}>
+      <button className="btn btn-warning border-0 rounded-pill text-uppercase mx-auto" onClick={() => handleButtonClick(removeTitle, removeContent, "REMOVE")}>
         Remove
       </button>
 
