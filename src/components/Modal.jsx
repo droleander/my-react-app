@@ -25,17 +25,17 @@ function Modal({ employee, handleDelete }) {
   
   const detailsTitle = <div>Employee Details</div>;
   const detailsContent =
-    <div>
+    <p>
       <b>NAME:</b> {employee.name || "NAME"} <br />
       <b>JOB:</b> {employee.job || "POSITION"} <br />
       <b>ID:</b> {employee.idx.slice(0, 8) || "XXXXXXXX"} <br />
       <b>HOBBIES:</b> {employee.hobbies || "HOBBIES"} <br />
-    </div>;
+    </p>;
   const removeTitle = <div>Remove Employee</div>;
   const removeContent =
-    <div>
+    <p>
       <b>{employee.name.toUpperCase() || "NAME"}</b>... so long, farewell, auf Wiedersehen, byeee!
-    </div>;
+    </p>;
   
   return (
     <>
@@ -68,7 +68,7 @@ function Modal({ employee, handleDelete }) {
                   onClick={() => handleClose()}>
                 </button>
               </div>
-              <div className="modal-body">{modalContent}</div>
+              <div className="modal-body pb-0">{modalContent}</div>
               <div className="modal-footer border-2 border-primary border-opacity-25">
                 <p className="m-auto">&copy; {new Date().getFullYear()}</p>
               </div>
