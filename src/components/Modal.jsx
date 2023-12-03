@@ -26,15 +26,15 @@ function Modal({ employee, handleDelete }) {
   const detailsTitle = <div>Employee Details</div>;
   const detailsContent =
     <div>
-      <b>Name:</b> {employee.name || "NAME"} <br />
-      <b>Job:</b> {employee.job || "POSITION"} <br />
+      <b>NAME:</b> {employee.name || "NAME"} <br />
+      <b>JOB:</b> {employee.job || "POSITION"} <br />
       <b>ID:</b> {employee.idx.slice(0, 8) || "XXXXXXXX"} <br />
-      <b>Hobbies:</b> {employee.hobbies || "HOBBIES"} <br />
+      <b>HOBBIES:</b> {employee.hobbies || "HOBBIES"} <br />
     </div>;
-  const removeTitle = <div>Removed Employee</div>;
+  const removeTitle = <div>Remove Employee</div>;
   const removeContent =
     <div>
-      <b>{employee.name || "NAME"}</b>... so long, farewell, auf Wiedersehen, byeee!
+      <b>{employee.name.toUpperCase() || "NAME"}</b>... so long, farewell, auf Wiedersehen, byeee!
     </div>;
   
   return (
@@ -57,7 +57,7 @@ function Modal({ employee, handleDelete }) {
       {show && (
         <div className="modal" tabIndex="-1" role="dialog" style={{ display: 'block' }}>
           <div className="modal-dialog" role="document">
-            <div className="modal-content bg-light rounded-4 text-dark pb-2">
+            <div className="modal-content border-2 border-primary bg-light rounded-5 text-dark pb-2">
               <div className="modal-header border-2 border-primary border-opacity-25">
                 <h1 className="modal-title h3">{modalTitle}</h1>
                 <button
@@ -68,7 +68,7 @@ function Modal({ employee, handleDelete }) {
                   onClick={() => handleClose()}>
                 </button>
               </div>
-              <div className="modal-body fs-5">{modalContent}</div>
+              <div className="modal-body">{modalContent}</div>
               <div className="modal-footer border-2 border-primary border-opacity-25">
                 <p className="m-auto">&copy; {new Date().getFullYear()}</p>
               </div>
