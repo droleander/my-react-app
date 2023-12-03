@@ -5,8 +5,8 @@ import { useState } from "react";
 function Modal({ employee, handleDelete }) {
   
   // const [show, setShow] = useState(false);
+  const [modalHeading, setModalHeading] = useState(null);
   const [modalContent, setModalContent] = useState(null);
-  const [modalTitle, setModalTitle] = useState(null);
   
   // const handleShow = () => setShow(true);
   const handleClose = () => {
@@ -14,8 +14,8 @@ function Modal({ employee, handleDelete }) {
     btnClicked === "REMOVE" && handleDelete(employee.idx);
   };
   
-  const handleButtonClick = (title, content, button) => {
-    setModalTitle(title);
+  const handleButtonClick = (heading, content, button) => {
+    setModalHeading(heading);
     setModalContent(content);
     setBtnClicked(button);
     // handleShow();
@@ -23,7 +23,7 @@ function Modal({ employee, handleDelete }) {
   
   const [btnClicked, setBtnClicked] = useState(null);
   
-  const detailsTitle = <div>Employee Details</div>;
+  const detailsHeading = "Employee Details";
   const detailsContent =
     <p>
       <b>NAME:</b> {employee.name || "NAME"} <br />
@@ -31,28 +31,48 @@ function Modal({ employee, handleDelete }) {
       <b>ID:</b> {employee.idx.slice(0, 8) || "XXXXXXXX"} <br />
       <b>HOBBIES:</b> {employee.hobbies || "HOBBIES"} <br />
     </p>;
-  const removeTitle = <div>Remove Employee</div>;
+  const removeHeading = "Remove Employee";
   const removeContent =
     <p>
-      <b>{employee.name.toUpperCase() || "NAME"}</b>... so long, farewell, auf Wiedersehen, byeee!
+      <b>{employee.name || "NAME"}</b>... so long, farewell, auf Wiedersehen, byeee!
     </p>;
   
   return (
     <>
-      {/* <!-- "DETAILS" button that will trigger modal --> */}
-      {/* <button
+      {/* <!-- "DETAILS" button triggers alertModal --> */}
+      <button
         className="btn btn-warning border-0 rounded-pill text-uppercase mx-auto"
-        onClick={() => handleButtonClick(detailsTitle, detailsContent, "DETAILS")}>
+        onClick={() => handleButtonClick(detailsHeading, detailsContent, "DETAILS")}
+        data-bs-toggle="modal"
+        data-bs-target={"#alertModal" + employee.idx}>
         Details
-      </button> */}
+      </button>
       
-      {/* <!-- "REMOVE" button that will trigger modal --> */}
-      {/* <button
+      {/* <!-- "REMOVE" button triggers alertModal --> */}
+      <button
         className="btn btn-warning border-0 rounded-pill text-uppercase mx-auto"
-        onClick={() => handleButtonClick(removeTitle, removeContent, "REMOVE")}>
+        onClick={() => handleButtonClick(removeHeading, removeContent, "REMOVE")}
+        data-bs-toggle="modal"
+        data-bs-target={"#alertModal" + employee.idx}>
         Remove
-      </button> */}
+      </button>
 
+      {/* <!-- alertModal triggered by "DETAILS" and "REMOVE" buttons --> */}
+      <div className="modal fade" id={"alertModal" + employee.idx} tabIndex="-1" aria-labelledby="alertModalLabel" aria-hidden="true" >
+        <div className="modal-dialog">
+          <div className="modal-content border-2 border-primary bg-light rounded-5 text-dark pb-2">
+            <div className="modal-header border-2 border-primary border-opacity-25">
+              <h1 className="modal-title h3" id="alertModalLabel">{modalHeading}</h1>
+              <button type="button" className="btn-close fs-3" data-bs-dismiss="modal" aria-label="Close" onClick={() => handleClose()}></button>
+            </div>
+            <div className="modal-body pb-0">{modalContent}</div>
+            <div className="modal-footer border-2 border-primary border-opacity-25">
+              <p className="m-auto">&copy; {new Date().getFullYear()}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       {/* <!-- Modal triggered by "DETAILS" and "REMOVE" buttons --> */}
       {/* {show && (
         <div className="modal" tabIndex="-1" role="dialog" style={{ display: 'block' }}>
@@ -76,51 +96,6 @@ function Modal({ employee, handleDelete }) {
           </div>
         </div>
       )} */}
-      
-      {/* <!-- Button trigger modal --> */}
-      <button
-        className="btn btn-warning border-0 rounded-pill text-uppercase mx-auto"
-        data-bs-toggle="modal"
-        data-bs-target="#alertModal"
-        onClick={() => handleButtonClick(detailsTitle, detailsContent, "DETAILS")}>
-        Details
-      </button>
-      
-      {/* <!-- "REMOVE" button that will trigger modal --> */}
-      <button
-        className="btn btn-warning border-0 rounded-pill text-uppercase mx-auto"
-        data-bs-toggle="modal"
-        data-bs-target="#alertModal"
-        onClick={() => handleButtonClick(removeTitle, removeContent, "REMOVE")}>
-        Remove
-      </button>
-      
-      {/* <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Launch demo modal
-      </button> */}
-
-      {/* <!-- Modal --> */}
-      <div className="modal fade" id="alertModal" tabIndex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
-        <div className="modal-dialog">
-          <div className="modal-content border-2 border-primary bg-light rounded-5 text-dark pb-2">
-            <div className="modal-header border-2 border-primary border-opacity-25">
-              <h1 className="modal-title h3" id="alertModalLabel">{modalTitle}</h1>
-              {/* <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> */}
-              <button
-                type="button"
-                className="btn-close fs-3"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-                onClick={() => handleClose()}>
-              </button>
-            </div>
-            <div className="modal-body pb-0">{modalContent}</div>
-            <div className="modal-footer border-2 border-primary border-opacity-25">
-              <p className="m-auto">&copy; {new Date().getFullYear()}</p>
-            </div>
-          </div>
-        </div>
-      </div>
       
     </>
   )
