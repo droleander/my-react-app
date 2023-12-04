@@ -64,14 +64,14 @@ function Modal({ employee, handleDelete }) {
                 className="btn btn-warning border-0 rounded-pill text-uppercase "
                 data-bs-dismiss="modal"
                 onClick={() => btnClicked === "REMOVE" && handleDelete(employee.idx)}>
-                {btnClicked === "REMOVE" && "Yes" || "Close"}
+                {btnClicked === "REMOVE" && "Ok" || "Close"}
               </button>
               {btnClicked === "REMOVE" &&
                 <button
                   type="button"
                   className="btn btn-warning border-0 rounded-pill text-uppercase "
                   data-bs-dismiss="modal">
-                  No
+                  Cancel
                 </button>
               }
             </div>
