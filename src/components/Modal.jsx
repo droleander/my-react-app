@@ -78,31 +78,6 @@ function Modal({ employee, handleDelete }) {
           </div>
         </div>
       </div>
-      
-      {/* <!-- Modal triggered by "DETAILS" and "REMOVE" buttons --> */}
-      {/* {show && (
-        <div className="modal" tabIndex="-1" role="dialog" style={{ display: 'block' }}>
-          <div className="modal-dialog" role="document">
-            <div className="modal-content border-2 border-primary bg-light rounded-5 text-dark pb-2">
-              <div className="modal-header border-2 border-primary border-opacity-25">
-                <h1 className="modal-title h3">{modalTitle}</h1>
-                <button
-                  type="button"
-                  className="btn-close fs-3"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                  onClick={() => handleClose()}>
-                </button>
-              </div>
-              <div className="modal-body pb-0">{modalContent}</div>
-              <div className="modal-footer border-2 border-primary border-opacity-25">
-                <p className="m-auto">&copy; {new Date().getFullYear()}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      )} */}
-      
     </>
   )
 }
