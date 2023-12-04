@@ -39,4 +39,5 @@ body {
 
 button {
     min-width: 80px;
+    font-weight: bold;
 }
