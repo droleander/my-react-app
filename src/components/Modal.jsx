@@ -52,16 +52,16 @@ function Modal({ employee, handleDelete }) {
       {/* <!-- alertModal triggered by "DETAILS" and "REMOVE" buttons --> */}
       <div className="modal fade" id={"alertModal" + employee.idx} data-bs-backdrop="static" tabIndex="-1" aria-labelledby="alertModalLabel" aria-hidden="true" >
         <div className="modal-dialog">
-          <div className="modal-content border-2 border-primary bg-light rounded-5 text-dark">
-            <div className="modal-header border-2 border-primary border-opacity-25">
+          <div className="modal-content rounded-5 text-dark">
+            <div className="modal-header">
               <h1 className="modal-title h3" id="alertModalLabel">{modalHeading}</h1>
             </div>
             <div className="modal-body">{modalContent}</div>
-            <div className="modal-footer border-2 border-primary border-opacity-25">
+            <div className="modal-footer">
               <p className="me-auto">&copy; {new Date().getFullYear()}</p>
               <button
                 type="button"
-                className="btn btn-warning border-0 rounded-pill text-uppercase "
+                className="btn btn-warning border-0 rounded-pill text-uppercase"
                 data-bs-dismiss="modal"
                 onClick={() => btnClicked === "REMOVE" && handleDelete(employee.idx)}>
                 {btnClicked === "REMOVE" && "Ok" || "Close"}
@@ -69,7 +69,7 @@ function Modal({ employee, handleDelete }) {
               {btnClicked === "REMOVE" &&
                 <button
                   type="button"
-                  className="btn btn-warning border-0 rounded-pill text-uppercase "
+                  className="btn btn-warning border-0 rounded-pill text-uppercase"
                   data-bs-dismiss="modal">
                   Cancel
                 </button>
