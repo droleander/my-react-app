@@ -49,7 +49,7 @@ function Modal({ employee, handleDelete }) {
 
       {/* <!-- alertModal triggered by "DETAILS" and "REMOVE" buttons --> */}
       <div className="modal fade" id={"alertModal" + employee.idx} data-bs-backdrop="static" tabIndex="-1" aria-labelledby="alertModalLabel" aria-hidden="true" >
-        <div className="modal-dialog">
+        <div className="modal-dialog modal-dialog-centered">
           <div className="modal-content rounded-5 text-dark">
             <div className="modal-header">
               <h1 className="modal-title h3" id="alertModalLabel">{modalHeading}</h1>
