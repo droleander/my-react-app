@@ -36,10 +36,12 @@ function App() {
   return (
     <>
       <Header />
+      
       {employees.length === 0
         && <p className="display-6 m-auto">No records found</p>
         || <Card employees={employees} handleDelete={handleDelete} heading="Current Employees" />
       }
+      
       <Footer />
     </>
   )
