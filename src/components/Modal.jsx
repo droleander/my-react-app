@@ -16,18 +16,16 @@ function Modal({ employee, handleDelete }) {
   
   const detailsHeading = "Employee Details";
   const detailsContent =
-    <p className="m-0">
+    <>
       <b>NAME:</b> {employee.name || "NAME"} <br />
       <b>JOB:</b> {employee.job || "POSITION"} <br />
       <b>ID:</b> {employee.idx.slice(0, 8) || "XXXXXXXX"} <br />
       <b>HOBBIES:</b> {employee.hobbies || "HOBBIES"} <br />
-    </p>;
+    </>;
   
   const removeHeading = "Remove Employee";
   const removeContent =
-    <p className="m-0">
-      <b>{employee.name || "NAME"}</b>... so long, farewell, auf Wiedersehen, byeee!
-    </p>;
+    <><b>{employee.name || "NAME"}</b>... so long, farewell, auf Wiedersehen, byeee!</>;
   
   return (
     <>
