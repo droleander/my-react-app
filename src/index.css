@@ -42,6 +42,10 @@ body {
     min-width: 320px;
 }
 
+.modal-body p {
+    margin: 0;
+}
+
 button {
     min-width: 66pt;
     font-weight: bold;

@@ -17,17 +17,17 @@ function Modal({ employee, handleDelete }) {
   const detailsHeading = "Employee Details";
   const detailsContent = (
     <>
-      <b>NAME:</b> {employee.name || "NAME"} <br />
-      <b>JOB:</b> {employee.job || "POSITION"} <br />
-      <b>ID:</b> {employee.idx.slice(0, 8) || "XXXXXXXX"} <br />
-      <b>HOBBIES:</b> {employee.hobbies || "HOBBIES"}
+      <p><b>NAME:</b> {employee.name || "NAME"}</p>
+      <p><b>JOB:</b> {employee.job || "POSITION"}</p>
+      <p><b>ID:</b> {employee.idx.slice(0, 8) || "XXXXXXXX"}</p>
+      <p><b>HOBBIES:</b> {employee.hobbies || "HOBBIES"}</p>
     </>
   );
   
   const removeHeading = "Remove Employee";
   const removeContent = (
     <>
-      <b>{employee.name || "NAME"}</b>... so long, farewell, auf Wiedersehen, byeee!
+      <p><b>{employee.name || "NAME"}</b>... so long, farewell, auf Wiedersehen, byeee!</p>
     </>
   );
   
