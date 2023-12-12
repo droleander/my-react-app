@@ -20,7 +20,7 @@ function Modal({ employee, handleDelete }) {
       <b>NAME:</b> {employee.name || "NAME"} <br />
       <b>JOB:</b> {employee.job || "POSITION"} <br />
       <b>ID:</b> {employee.idx.slice(0, 8) || "XXXXXXXX"} <br />
-      <b>HOBBIES:</b> {employee.hobbies || "HOBBIES"} <br />
+      <b>HOBBIES:</b> {employee.hobbies || "HOBBIES"}
     </>
   );
   
@@ -35,6 +35,7 @@ function Modal({ employee, handleDelete }) {
     <>
       {/* <!-- "DETAILS" button triggers alertModal --> */}
       <button
+        type="button"
         className="btn btn-warning border-0 rounded-pill text-uppercase mx-auto"
         data-bs-toggle="modal"
         data-bs-target={"#alertModal" + employee.idx}
@@ -44,6 +45,7 @@ function Modal({ employee, handleDelete }) {
       
       {/* <!-- "REMOVE" button triggers alertModal --> */}
       <button
+        type="button"
         className="btn btn-warning border-0 rounded-pill text-uppercase mx-auto"
         data-bs-toggle="modal"
         data-bs-target={"#alertModal" + employee.idx}
