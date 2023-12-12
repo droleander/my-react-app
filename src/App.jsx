@@ -37,9 +37,9 @@ function App() {
     <>
       <Header />
       
-      {employees.length === 0
-        && <p className="display-6 m-auto">No records found</p>
-        || <Card employees={employees} handleDelete={handleDelete} heading="Current Employees" />
+      {!!employees.length
+        && <Card employees={employees} handleDelete={handleDelete} heading="Current Employees" />
+        || <p className="display-6 m-auto">No records found</p>
       }
       
       <Footer />

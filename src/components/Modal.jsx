@@ -15,17 +15,21 @@ function Modal({ employee, handleDelete }) {
   };
   
   const detailsHeading = "Employee Details";
-  const detailsContent =
+  const detailsContent = (
     <>
       <b>NAME:</b> {employee.name || "NAME"} <br />
       <b>JOB:</b> {employee.job || "POSITION"} <br />
       <b>ID:</b> {employee.idx.slice(0, 8) || "XXXXXXXX"} <br />
       <b>HOBBIES:</b> {employee.hobbies || "HOBBIES"} <br />
-    </>;
+    </>
+  );
   
   const removeHeading = "Remove Employee";
-  const removeContent =
-    <><b>{employee.name || "NAME"}</b>... so long, farewell, auf Wiedersehen, byeee!</>;
+  const removeContent = (
+    <>
+      <b>{employee.name || "NAME"}</b>... so long, farewell, auf Wiedersehen, byeee!
+    </>
+  );
   
   return (
     <>
@@ -64,14 +68,14 @@ function Modal({ employee, handleDelete }) {
                 onClick={() => btnClicked === "REMOVE" && handleDelete(employee.idx)}>
                 {btnClicked === "REMOVE" && "Ok" || "Close"}
               </button>
-              {btnClicked === "REMOVE" &&
+              {btnClicked === "REMOVE" && (
                 <button
                   type="button"
                   className="btn btn-warning border-0 rounded-pill text-uppercase"
                   data-bs-dismiss="modal">
                   Cancel
                 </button>
-              }
+              )}
             </div>
           </div>
         </div>
