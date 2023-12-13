@@ -16,7 +16,7 @@ function Card({ employees, heading, handleDelete }) {
               <p className="card-text lh-1">{employee.job || "POSITION"}</p>
             </div>
             <div className="d-flex justify-content-center align-items-center mb-2">
-              <Modal handleDelete={handleDelete} employee={employee} />
+              <Modal employee={employee} handleDelete={handleDelete} />
             </div>
           </div>
         ))}
